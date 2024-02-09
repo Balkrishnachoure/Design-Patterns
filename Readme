@@ -32,6 +32,9 @@ Singleton Design Pattern : It is a desing pattern which  ensure that a class has
  When to Use :  
 1 .When there should be exactly one instance of the class .
 2 .Singleton class are use for logging , caching ,thread pool ,data base connection .
+3 DataBase Connection : Using Singleton pattern ensures that there is only one instance of database connection object .
+4 Caching : By using Singleton pattern for cache manager , we can ensure that there is only one instance of cache , avoiding  duplication and ensuring 
+  consistency in data .
 
 Some Points to cover : 
 1. Private static variable . 
