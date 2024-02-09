@@ -26,8 +26,7 @@ software components  by identifying relationship between them .
 3. Adapter pattern .
 
 
-
-Singleton Design Pattern : It is a desing pattern which  ensure that a class has only one instance , and provides a global point of access to it . 
+1 .Singleton Design Pattern : It is a desing pattern which  ensure that a class has only one instance , and provides a global point of access to it . 
 
  When to Use :  
 1 .When there should be exactly one instance of the class .
@@ -47,4 +46,7 @@ Ways to implement singleton Desing pattern :
 3. Eager Instantiation : Static initialzr based implementation .
 4. Use "Double checked Locking" - i.e using synchronized block .
 
-
+2. Factory Design pattern : Factory Design Pattern helps to create loosely coupled OOPs design .  
+   Whenever we use new Keyword(and instantiate a class)  we are providing concrete implementation and voilating the principle that we should favour
+   abstraction .
+  In factory pattern we can instantiate all the classes in a seperate class  .(Fundametal principle of Factory DP) 
