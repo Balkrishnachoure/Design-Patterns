@@ -1,5 +1,20 @@
 Format : About.
          UseCases.
 
-Singleton Design Pattern :
+Singleton Design Pattern : It is a desing pattern which  ensure that a class has only one instance , and provides a global point of access to it . 
+
+ When to Use :  
+1 .When there should be exactly one instance of the class .
+2 .Singleton class are use for logging , caching ,thread pool ,data base connection .
+
+Some Points to cover : 
+1. Private static variable . 
+2. Private constructor .
+3 public static factory method - getInstance() 
+
+Ways to implement singleton Desing pattern : 
+1. Classic implementation : Makeing getInstance() static 
+2. Make getInstance() synchronized .
+3. Eager Instantiation : Static initialzr based implementation .
+4. Use "Double checked Locking" - i.e using synchronized block .
 
