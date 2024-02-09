@@ -56,6 +56,7 @@ Ways to implement singleton Desing pattern :
 1. Object Creation : It hepls to Encapsulate the object creation mechanism 
 2. Decouple the code - Factory hepls to decouple the code from concrete implementation .Clients interact with factory interface rather then directly 
    instantiating the object .
-3. Dependency Injection : 
+3. Dependency Injection : Factories are used in dependency injection frameworks to manage the creation of objects and resolve dependencies .It provide a way to 
+   inject dependencies into objects without coupling the code to specific implementation .
 
 
