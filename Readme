@@ -53,10 +53,16 @@ Ways to implement singleton Desing pattern :
    In factory pattern we can instantiate all the classes in a seperate class  .(Fundametal principle of Factory DP)  .
 
   UsesCases : 
-1. Object Creation : It hepls to Encapsulate the object creation mechanism 
-2. Decouple the code - Factory hepls to decouple the code from concrete implementation .Clients interact with factory interface rather then directly 
+1. Object Creation : It hepls to Encapsulate the object creation mechanism .
+2. Decouple the code - Factory hepls to decouple the code from concrete implementation . Clients interact with factory interface rather then directly 
    instantiating the object .
 3. Dependency Injection : Factories are used in dependency injection frameworks to manage the creation of objects and resolve dependencies .It provide a way to 
    inject dependencies into objects without coupling the code to specific implementation .
+
+3. Builder Pattern : Builder Pattern allows you to construct a complex object step by step . It seperate the construction of complex object from its 
+   representation ,allowing the same construction process to create different representations .
+
+   Why builder Pattern : Let suppose we have large no of parameters 
+
 
 
