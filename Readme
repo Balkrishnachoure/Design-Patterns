@@ -2,7 +2,7 @@ Format : About.
          UseCases.
 
 Three types of Desing patterns are there  :
-1. Creational Design pattern :  It provide the various object creation mechanism which increase flexibilty and resue of exixting code . 
+1. Creational Design pattern :  It provide the various object creation mechanism which increase flexibilty and resue of existing code . 
 
 1.Singleton Desing pattern . 
 2.factory pattern.
