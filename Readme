@@ -46,7 +46,16 @@ Ways to implement singleton Desing pattern :
 3. Eager Instantiation : Static initialzr based implementation .
 4. Use "Double checked Locking" - i.e using synchronized block .
 
-2. Factory Design pattern : Factory Design Pattern helps to create loosely coupled OOPs design .  
+2. Factory Design pattern : It is used to create objects without specifying the exact class of object  that will be created .
+   Factory Design Pattern helps to create loosely coupled OOPs design .  
    Whenever we use new Keyword(and instantiate a class)  we are providing concrete implementation and voilating the principle that we should favour
    abstraction .
-  In factory pattern we can instantiate all the classes in a seperate class  .(Fundametal principle of Factory DP) 
+   In factory pattern we can instantiate all the classes in a seperate class  .(Fundametal principle of Factory DP)  .
+
+  UsesCases : 
+1. Object Creation : It hepls to Encapsulate the object creation mechanism 
+2. Decouple the code - Factory hepls to decouple the code from concrete implementation .Clients interact with factory interface rather then directly 
+   instantiating the object .
+3. Dependency Injection : 
+
+
