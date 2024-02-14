@@ -62,7 +62,12 @@ Ways to implement singleton Desing pattern :
 3. Builder Pattern : Builder Pattern allows you to construct a complex object step by step . It seperate the construction of complex object from its 
    representation ,allowing the same construction process to create different representations .
 
-   Why builder Pattern : Let suppose we have large no of parameters in you  entity class
+ Why builder Pattern : It is useful when dealing with the objects that have large number of optional parameters .
+
+ UseCases :
+1 .Flexible object creation : When an object can be created in multiple ways or has many optional parameters , the builder pattern allows the construction 
+                           process more flexible and intutive .
+2. Hence it is the efficient tool for creating the objects in flexible ,readable and maintainable way .
 
 
 
