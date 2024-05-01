@@ -17,3 +17,20 @@ Ways to implement singleton Desing pattern :
 2. Make getInstance() synchronized .
 3. Eager Instantiation : Static initialzr based implementation .
 4. Use "Double checked Locking" - i.e using synchronized block .
+
+Simple Structure : 
+class Singleton 
+{
+   private static Singleton s ; 
+
+  private Singleton() 
+   {
+   }
+
+public static Singleton getInstance() 
+{
+   if(s == null)  s= new Singleton() ;
+    return s ;
+}
+}
+
