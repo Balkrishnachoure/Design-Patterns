@@ -13,7 +13,7 @@ Steps :
 3. static method ( getInstance()) that return the object of singleton class .
 
 Ways to implement singleton Desing pattern : 
-1. Classic implementation : Makeing getInstance() static 
+1. Classic implementation (Lazy Instantiation)  : Makeing getInstance() static 
 2. Make getInstance() synchronized .
 3. Eager Instantiation : Static initialzr based implementation .
 4. Use "Double checked Locking" - i.e using synchronized block .
