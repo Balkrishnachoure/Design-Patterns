@@ -1,1 +1,29 @@
+Format : About.
+         UseCases.
 
+Three types of Desing patterns are there  :
+1. Creational Design pattern :  It provide the various object creation mechanism which increase flexibilty and resue of existing code . 
+
+1.Singleton Desing pattern . 
+2.factory pattern.
+3.Builder pattern .
+4 .Prototype pattern .
+
+
+2.Behavioral Design pattern : These are the design patterns that identify common communication pattern between the objects .These increases the flexibilty 
+in carrying out communication .
+1.Strategy pattern .
+2.Observer Pattern .
+3.Command Pattern .
+4.Template Pattern .
+5.Visitor pattren .
+6.Null object and iterator pattern .
+
+
+
+3.Structual Design pattern : Structural Desing patterns are about how classes and objects can be composed to form Larger structure .It simplifies structure of
+software components  by identifying relationship between them .
+
+1. Decorator Pattern .
+2. Facade pattern. 
+3. Adapter pattern .
