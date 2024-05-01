@@ -1,1 +1,12 @@
+Builder Pattern : The builder pattern is a creational design pattern that allows for the construction of 
+complex objects step by step .It seperate the construction of complex object from its 
+representation ,allowing the same construction process to create different representations .
 
+ Why builder Pattern : It is useful when dealing with the objects that have large number of optional parameters .
+
+ UseCases :
+1 .Flexible object creation : When an object can be created in multiple ways or has many optional parameters , the builder pattern allows the construction 
+                           process more flexible and intutive .
+2. Hence it is the efficient tool for creating the objects in flexible ,readable and maintainable way .
+
+Steps : 
