@@ -1,1 +1,24 @@
+Factory Desing Pattern : This design pattern create the object based on certain condition or parameters we passed.
+It encapsulate/hide Object Creation logic and help to maintain centralized object creation process . 
+
+Factory Design Pattern helps to create loosely coupled OOPs design .
+
+Whenever we use new Keyword(and instantiate a class)  we are providing concrete implementation and voilating the SOLID  principle that we should favour
+   abstraction .
+In factory pattern we can instantiate all the classes(Object) in a seperate Factory class  .(Fundametal principle of Factory DP)  .
+
+UsesCases : 
+1. Object Creation : It hepls to Encapsulate the object creation mechanism .
+2. Decouple the code - Factory hepls to decouple the code from concrete implementation . Clients interact with factory interface rather then directly 
+   instantiating the object .
+3. Dependency Injection : Factories are used in dependency injection frameworks to manage the creation of objects and resolve dependencies .It provide a way to 
+   inject dependencies into objects without coupling the code to specific implementation .
+
+
+Steps : 
+1.  create Interface  having method ( Eg. eat() )
+2.  Multipe classes implementing the interface method .( Eg. Cat, Dog ,Tiger class implementing eat() ) .
+3.  Create Factory class (Eg : AnimalFactory ) having method ( Eg : getAnimal( String type) )  that contains condition to create object .
+4. In main class Create factory class object  , call getAnimal("Dog") storing it in Reference (Cat cat )  of Particlular class  . 
+5. Call  method you want to implement ( Eg . cat.eat() ) .
 
