@@ -34,7 +34,7 @@ public static Singleton getInstance()
 }
 }
 
-
+--------------------------------------
 Question : Compare the Implementation of Singleton and Immutable class ? 
 Ans :  Immutable class means once the object is Created we can't change its content .All wrapper class ( Integer , Byte ) , 
         String class is immutable .
