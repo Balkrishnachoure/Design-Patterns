@@ -10,7 +10,7 @@ When to Use :
 Steps : 
 1. Instance Variable - private static .
 2. Constructor - private .
-3. static method ( getInstance()) the return the object of singleton class .
+3. static method ( getInstance()) that return the object of singleton class .
 
 Ways to implement singleton Desing pattern : 
 1. Classic implementation : Makeing getInstance() static 
