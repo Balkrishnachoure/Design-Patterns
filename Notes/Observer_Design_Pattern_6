@@ -1,1 +1,94 @@
+Observer Design Pattern : It is a behavioural design pattern that defines one-to-many dependency bet the objects so that when one object(Subject)  changes  state 
+                all its dependency(objects)(Observer)  are notified and updated auomatically .
+
+
+Steps :  Make subject interface having registerObserver() ,removeObserver() and notifyObserver() and make 
+         its implementation class  having List of Observer .In implementaion class each method contains notifyObserver() . 
+         Make observer Interface having update() and its implementaion class having sunject reference and update() .
+         Make main Class .
+
+
+When to Use : 
+In event Driven System where producers acts as a subjects and consumers act as observers .When event occur 
+subjects notify observers and they can respond accordingly .
+We can use observer pattern in monitoring systems where you need to monitor the state of objects or systems .
+In MVC architectural pattern view register themselves as the observer of modle so that they can update their 
+presentation whenever the model changes .
+
+
+
+Simple Code : 
+
+import java.util.ArrayList;
+import java.util.List;
+
+// Subject interface
+interface Subject {
+    void registerObserver(Observer observer);
+    void removeObserver(Observer observer);
+    void notifyObservers();
+}
+
+// Concrete Subject class
+class ConcreteSubject implements Subject {
+    private List<Observer> observers = new ArrayList<>();
+    private int state;
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+        notifyObservers();
+    }
+
+    @Override
+    public void registerObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update();
+        }
+    }
+}
+
+// Observer interface
+interface Observer {
+    void update();
+}
+
+// Concrete Observer class
+class ConcreteObserver implements Observer {
+    private ConcreteSubject subject;
+
+    public ConcreteObserver(ConcreteSubject subject) {
+        this.subject = subject;
+        this.subject.registerObserver(this);
+    }
+
+    @Override
+    public void update() {
+        System.out.println("Observer updated with state: " + subject.getState());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ConcreteSubject subject = new ConcreteSubject();
+        ConcreteObserver observer1 = new ConcreteObserver(subject);
+        ConcreteObserver observer2 = new ConcreteObserver(subject);
+
+        subject.setState(5);
+        subject.setState(10);
+    }
+}
 
