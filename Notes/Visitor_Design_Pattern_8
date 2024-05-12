@@ -1,1 +1,75 @@
+Visitor Design Pattern : It is a behavioural design pattern .It seperates the algorithm from object structure on which it
+        operates by moving the algorithm into a seperate object known as visitor .
+This pattern is useful when you have a complex object structure and you want to perform various opreations on it without 
+modifying the classes of the object .
 
+Steps : 
+
+
+
+
+Simple code : 
+
+
+
+// Element interface
+interface Visitable {
+    void accept(Visitor visitor);
+}
+
+// Concrete element classes
+class ConcreteElementA implements Visitable {
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+    
+    void operationA() {
+        System.out.println("Operation A performed on ConcreteElementA");
+    }
+}
+
+class ConcreteElementB implements Visitable {
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+    
+    void operationB() {
+        System.out.println("Operation B performed on ConcreteElementB");
+    }
+}
+
+// Visitor interface
+interface Visitor {
+    void visit(ConcreteElementA element);
+    void visit(ConcreteElementB element);
+}
+
+// Concrete visitor implementing Visitor interface
+class ConcreteVisitor implements Visitor {
+    @Override
+    public void visit(ConcreteElementA element) {
+        element.operationA();
+    }
+    
+    @Override
+    public void visit(ConcreteElementB element) {
+        element.operationB();
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        ConcreteElementA elementA = new ConcreteElementA();
+        ConcreteElementB elementB = new ConcreteElementB();
+        
+        Visitor visitor = new ConcreteVisitor();
+        
+        elementA.accept(visitor);
+        elementB.accept(visitor);
+    }
+}
+
+         
