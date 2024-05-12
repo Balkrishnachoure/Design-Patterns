@@ -1,1 +1,85 @@
+Strategy Desing Pattern : It is a  Behavioural Design pattenr and a way to design  your  code so that you can easily switch between different 
+                algorithms at runtime .It allows you to select appropriate algorithm dynamically , without hard 
+                coding it into you code .
 
+When to use : 
+1. When you have multiple algorithm that can be used interchangeably .
+2.To avoid code duplication by encapsulating each algorithm into its own class .
+3. Hence it promote fleibilty , maintainability and code reuse .
+
+Steps : Make strategy Interface .
+        Make Concrete strategy Classes implemeting strategy interface .
+        Make context Class having strategy Inteface reference and setter for it .
+        Maiking Main Class .
+
+Simple Code Example : 
+
+
+// Define the strategy interface
+interface PaymentStrategy {
+    void pay(double amount);
+}
+
+// Concrete Strategy 1
+class CreditCardPaymentStrategy implements PaymentStrategy {
+    private String cardNumber;
+    private String expiryDate;
+    private String cvv;
+
+    public CreditCardPaymentStrategy(String cardNumber, String expiryDate, String cvv) {
+        this.cardNumber = cardNumber;
+        this.expiryDate = expiryDate;
+        this.cvv = cvv;
+    }
+
+    @Override
+    public void pay(double amount) {
+        System.out.println("Paying " + amount + " using Credit Card");
+        // Logic to pay using credit card
+    }
+}
+
+// Concrete Strategy 2
+class PayPalPaymentStrategy implements PaymentStrategy {
+    private String email;
+    private String password;
+
+    public PayPalPaymentStrategy(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
+    @Override
+    public void pay(double amount) {
+        System.out.println("Paying " + amount + " using PayPal");
+        // Logic to pay using PayPal
+    }
+}
+
+// Context class
+class ShoppingCart {
+    private PaymentStrategy paymentStrategy;
+
+    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
+        this.paymentStrategy = paymentStrategy;
+    }
+
+    public void checkout(double amount) {
+        paymentStrategy.pay(amount);
+    }
+}
+
+// Example usage
+public class StrategyPatternExample {
+    public static void main(String[] args) {
+        ShoppingCart cart = new ShoppingCart();
+        
+        // Customer selects credit card payment
+        cart.setPaymentStrategy(new CreditCardPaymentStrategy("1234567890123456", "12/25", "123"));
+        cart.checkout(100.0);
+        
+        // Customer selects PayPal payment
+        cart.setPaymentStrategy(new PayPalPaymentStrategy("example@example.com", "password"));
+        cart.checkout(200.0);
+    }
+}
