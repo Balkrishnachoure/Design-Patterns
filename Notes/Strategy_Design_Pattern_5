@@ -1,6 +1,6 @@
-Strategy Desing Pattern : It is a  Behavioural Design pattenr and a way to design  your  code so that you can easily switch between different 
-                algorithms at runtime .It allows you to select appropriate algorithm dynamically , without hard 
-                coding it into you code .
+Strategy Desing Pattern : It is a  Behavioural Design pattenr and a way to design  your  code so that you can easily 
+switch between different algorithms at runtime .It allows you to select appropriate algorithm dynamically 
+,without hard coding it into you code .
 
 When to use : 
 1. When you have multiple algorithm that can be used interchangeably .
