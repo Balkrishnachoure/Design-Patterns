@@ -9,8 +9,9 @@ When to use :
 
 Steps : Make strategy Interface .
         Make Concrete strategy Classes implemeting strategy interface .
-        Make context Class having strategy Inteface reference and setter for it .
-        Maiking Main Class .
+        Make context Class(Abstraction Layer)  having strategy Inteface reference and setter for it .
+        Apart from setter create common method to call implementation of Strategy Inteface .( Eg: pay() ) 
+        Making Main Class .
 
 Simple Code Example : 
 
@@ -63,9 +64,9 @@ class ShoppingCart {
     public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
         this.paymentStrategy = paymentStrategy;
     }
-
-    public void checkout(double amount) {
-        paymentStrategy.pay(amount);
+    //Common method
+    public void pay(double amount) {
+        this.paymentStrategy.pay(amount);
     }
 }
 
@@ -76,10 +77,10 @@ public class StrategyPatternExample {
         
         // Customer selects credit card payment
         cart.setPaymentStrategy(new CreditCardPaymentStrategy("1234567890123456", "12/25", "123"));
-        cart.checkout(100.0);
+        cart.pay(100.0);
         
         // Customer selects PayPal payment
         cart.setPaymentStrategy(new PayPalPaymentStrategy("example@example.com", "password"));
-        cart.checkout(200.0);
+        cart.pay(200.0);
     }
 }
