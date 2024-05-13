@@ -3,6 +3,10 @@ Visitor Design Pattern : It is a behavioural design pattern .It seperates the al
 This pattern is useful when you have a complex object structure and you want to perform various opreations on it without 
 modifying the classes of the object .
 
+When to Use : 
+
+
+
 Steps : 
 Create Interface Visitable  having accept() .
 Create concrete class implementing  accept() . 
@@ -10,6 +14,9 @@ Create Visitor Inteface having visit() with different arguments for differnt ope
 Create concrete Visitor Class.
 Create main() .
 
+Note :(In below Code> 
+This allow elemet ConcreteElementA and ConcreteElementB to accept a visitor (ConcreteVisitor) which then performs 
+operation on them without changing their classes .
 
 
 
