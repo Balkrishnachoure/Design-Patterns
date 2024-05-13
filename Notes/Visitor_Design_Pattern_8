@@ -4,6 +4,11 @@ This pattern is useful when you have a complex object structure and you want to 
 modifying the classes of the object .
 
 Steps : 
+Create Interface Visitable  having accept() .
+Create concrete class implementing  accept() . 
+Create Visitor Inteface having visit() with different arguments for differnt operations .
+Create concrete Visitor Class.
+Create main() .
 
 
 
@@ -64,7 +69,6 @@ public class Main {
     public static void main(String[] args) {
         ConcreteElementA elementA = new ConcreteElementA();
         ConcreteElementB elementB = new ConcreteElementB();
-        
         Visitor visitor = new ConcreteVisitor();
         
         elementA.accept(visitor);
