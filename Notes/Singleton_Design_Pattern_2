@@ -35,6 +35,10 @@ public static Singleton getInstance()
 }
 
 --------------------------------------
+Question : Ways to Break Singleton ? 
+Solutions :
+
+
 Question : Compare the Implementation of Singleton and Immutable class ? 
 Ans :  Immutable class means once the object is Created we can't change its content .All wrapper class ( Integer , Byte ) , 
         String class is immutable .
@@ -44,4 +48,55 @@ Steps :
 3. Create constructor having all the fields , performing deep copy . 
 4 . Create only getter performing deep copy . 
 
-Question : Ways to Break Singleton ? 
+Simple Structure : 
+
+
+public final class Immutable 
+{
+ private final String name ;
+ private final List<Address> addresses ;
+
+public Immutable( String name , List<Address> address )
+{
+   this.name = name ; 
+   this.address = new ArrayList<>() ; 
+}
+
+public List<Address> getAddress()
+{ 
+  return collections.unmodifiableList(address);
+}
+
+public String getName() 
+{  
+return name ;
+}
+
+
+ public static void main(String[] args) {
+
+        List<Address> addressList = new ArrayList<>();
+        addressList.add(new Address("123 Main St", "Cityville", "12345"));
+        addressList.add(new Address("456 Elm St", "Townsville", "67890"));
+
+        Immutable immutable = new Immutable("John Doe", addressList);
+
+        System.out.println("Name: " + immutable.getName());
+        System.out.println("Addresses: ");
+        for (Address address : immutable.getAddresses()) {
+            System.out.println(address);
+        }
+
+        // Attempting to modify the addresses list will throw an UnsupportedOperationException
+        try {
+            immutable.getAddresses().add(new Address("789 Oak St", "Villagetown", "54321"));
+        } catch (UnsupportedOperationException e) {
+            System.out.println("Cannot modify addresses list: " + e.getMessage());
+        }
+    }
+
+}
+
+
+
+
