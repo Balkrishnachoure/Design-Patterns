@@ -37,7 +37,18 @@ public static Singleton getInstance()
 --------------------------------------
 Question : Ways to Break Singleton ? 
 Solutions :
+1. Using reflection APIs .
 
+2. Serialization/Deserialization: Serializing the singleton object to a file and then deserializing 
+   it back into a new object .
+
+3.Cloning: If the singleton class implements the Cloneable interface, you can clone the 
+  object to create a new instance.
+
+4.Multithreading: If the singleton is not properly synchronized in a multithreaded environment, 
+  it might be possible for multiple threads to create instances simultaneously.
+
+---------------------------------------------------
 
 Question : Compare the Implementation of Singleton and Immutable class ? 
 Ans :  Immutable class means once the object is Created we can't change its content .All wrapper class ( Integer , Byte ) , 
