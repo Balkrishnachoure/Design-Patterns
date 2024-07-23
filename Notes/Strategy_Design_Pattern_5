@@ -57,7 +57,7 @@ class PayPalPaymentStrategy implements PaymentStrategy {
     }
 }
 
-// Context class
+// Context class : Important 
 class ShoppingCart {
     private PaymentStrategy paymentStrategy;
 
