@@ -1,4 +1,10 @@
+
 Singleton Class -  It is a desing pattern which  ensure that a class has only one instance , and provides a global point of access to it . 
+
+Significance : 
+This is crucial when a system needs one and only one instance of a class for its entire lifecycle.
+Examples include configuration managers, logging systems, connection pools, and caches.
+
 
 When to Use :  
 1 .When there should be exactly one instance of the class .
