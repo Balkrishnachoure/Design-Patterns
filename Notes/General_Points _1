@@ -1,7 +1,9 @@
 Format : About.
          UseCases.
 
-Three types of Desing patterns are there  :
+Three types of Desing patterns are there  : Design patterns are important in application development as it provide
+proven solutions to the common problem and improve code quality . 
+
 1. Creational Design pattern :  It provide the various object creation mechanism which increase flexibilty and resue of existing code . 
 
 1.Singleton Desing pattern . 
